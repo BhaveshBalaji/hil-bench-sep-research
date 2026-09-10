@@ -1,0 +1,59 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Results and data (too large, not redistributable)
+results/
+data/
+trajectories/
+logs/
+*.log
+*.out
+*.err
+
+# Ledger / checklist runtime state
+ledgers/
+checklists/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz
+paper/*.toc
+paper/*.lof
+paper/*.lot
+paper/*.out
+paper/*.run.xml
+paper/*.bcf
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Phase2 runtime outputs
+phase2_pairs.json
+phase2_results.json
+phase2_fm2_results.json
+phase2_fm3_results.json
+config_mappings.yaml.bak

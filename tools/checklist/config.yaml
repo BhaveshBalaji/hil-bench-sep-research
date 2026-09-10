@@ -1,0 +1,28 @@
+tools:
+  checklist_add:
+    signature: "checklist_add <description>"
+    docstring: "Add a new business ambiguity to your persistent checklist. Call this as soon as you identify an ambiguity — from the question text, during schema exploration, or while writing SQL. Returns the assigned ID (A1, A2, ...). Use this ID when calling checklist_done after resolving the ambiguity."
+    arguments:
+      - name: description
+        type: string
+        description: "A clear one-sentence description of the business ambiguity (e.g. 'What age threshold defines a senior account owner?')."
+        required: true
+
+  checklist_done:
+    signature: "checklist_done <id>"
+    docstring: "Mark a checklist ambiguity as resolved. Call this after get_business_info or ask_human provides a clear answer for the item. Example: checklist_done A1"
+    arguments:
+      - name: id
+        type: string
+        description: "The checklist item ID to mark as resolved (e.g. A1, A2)."
+        required: true
+
+  checklist_status:
+    signature: "checklist_status"
+    docstring: "Show all checklist items with their current status (resolved or pending). Call this any time to review your progress. Call before submitting to confirm all ambiguities are resolved."
+    arguments: []
+
+  checklist_pending:
+    signature: "checklist_pending"
+    docstring: "Show only the unresolved checklist items. If this returns any items, you must resolve them before calling submit_sql. Call this immediately before submitting."
+    arguments: []
